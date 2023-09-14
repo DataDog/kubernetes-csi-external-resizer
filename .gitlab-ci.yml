@@ -1,5 +1,11 @@
 include: https://gitlab-templates.ddbuild.io/compute-delivery/v2/compute-delivery.yml
 
+variables:
+  TEAM:
+    value: compute
+  COMPONENT:
+    value: csi
+
 test:
   stage: verify
   tags: [ "arch:amd64" ]
