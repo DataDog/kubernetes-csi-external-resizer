@@ -3,6 +3,7 @@ ARG BASE_IMAGE
 FROM golang:1.20 as builder
 WORKDIR /go/src/kubernetes-csi/external-resizer
 ADD . .
+ENV GOTOOLCHAIN auto
 ENV GOFLAGS="-buildvcs=false"
 RUN make build
 
